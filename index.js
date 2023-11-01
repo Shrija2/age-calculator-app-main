@@ -11,7 +11,7 @@ function getDay(){
     let month= document.querySelector('.month').value;
     let year= document.querySelector('.year').value;
 
-    document.querySelector('.da  te').classList.remove('red-border');
+    document.querySelector('.date').classList.remove('red-border');
     document.querySelector('.month').classList.remove('red-border');
     document.querySelector('.year').classList.remove('red-border');
 
