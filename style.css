@@ -2,7 +2,7 @@ html{
     background-color:  hsl(0, 0%, 94%);
 }
 main{
-    margin:20% 5% 20% 5%;
+    margin:20% 20% 20% 20%;
     background-color:white;
     padding:40px;
     border-radius: 4% 4% 25% 4%;
@@ -31,7 +31,7 @@ input{
     border:solid 0.2px;
     border-color: hsl(0, 1%, 44%, 0.2);
     border-radius:10%;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 800;
     padding:10px;
 }
