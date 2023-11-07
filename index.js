@@ -1,16 +1,17 @@
 document.getElementById("calculate").addEventListener('click', getDay);
-
-
+ 
 function getDay(){
     const currentYear = new Date().getFullYear();
     const currentMonth = new Date().getMonth() + 1;
     const currentDate = new Date().getDate();
     
+    let m=[31,28,31,30,31,30,31,31,30,31,30,31];
 
     let date = document.querySelector('.date').value;
     let month= document.querySelector('.month').value;
     let year= document.querySelector('.year').value;
 
+     
     document.querySelector('.date').classList.remove('red-border');
     document.querySelector('.month').classList.remove('red-border');
     document.querySelector('.year').classList.remove('red-border');
@@ -92,22 +93,29 @@ function getDay(){
             return;
         } 
         }  
+  
+    let ageYear=currentYear-year;
+    let ageDate=currentDate-date;
+    let ageMonth=currentMonth-month;
 
-    
 
-        let ageDate=Math.abs(currentDate-date);
-        let ageMonth=Math.abs(currentMonth-month);
-        let ageYear=Math.abs(currentYear-year);
-    
-        
-        
-        document.querySelector('.ageDate').innerHTML=ageDate;
-        document.querySelector('.ageMonth').innerHTML=ageMonth;
-        document.querySelector('.ageYear').innerHTML=ageYear;
-    
-        document.querySelector('.alertDate').innerHTML = '' ;
-        document.querySelector('.alertMonth').innerHTML='';
-        document.querySelector('.alertYear').innerHTML='';
+    if (ageDate<0){
+        ageMonth=ageMonth-1;
+        ageDate=ageDate+m[currentMonth-1];
+    }
+
+    if (ageMonth<0){
+        ageYear=ageYear-1;
+        ageMonth=ageMonth+12;
+    }
+  
+    document.querySelector('.ageDate').innerHTML=ageDate;
+    document.querySelector('.ageMonth').innerHTML=ageMonth;
+    document.querySelector('.ageYear').innerHTML=ageYear;
+
+    document.querySelector('.alertDate').innerHTML = '' ;
+    document.querySelector('.alertMonth').innerHTML='';
+    document.querySelector('.alertYear').innerHTML='';
     
         
         
