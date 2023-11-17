@@ -2,7 +2,7 @@ html{
     background-color:  hsl(0, 0%, 94%);
 }
 main{
-    margin:20%;
+    margin:5% 20% 5% 20%;
     background-color:white;
     padding:40px;
     border-radius: 4% 4% 25% 4%;
